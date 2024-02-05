@@ -23,7 +23,7 @@ def mbox_to_csv(mbox_file_path, csv_file_path):
         writer.writerow(['Subject', 'From', 'Date', 'To', 'Message-ID', 'Body'])
 
         for message in mbox:
-            body = get_body(message)  # Get the message body using the new get_body function
+            body = get_body(message) 
             if body:
                 body = body.decode('utf-8', errors='replace').replace('\n', ' ').replace('\r', '')
             else:
@@ -38,6 +38,6 @@ def mbox_to_csv(mbox_file_path, csv_file_path):
             ])
 
 # Usage
-mbox_file_path = 'Sent.mbox'  # replace with the path to your MBOX file
-csv_file_path = 'emails_sent.csv'  # replace with the desired path for the output CSV file
+mbox_file_path = 'Sent.mbox'
+csv_file_path = 'emails_sent.csv'
 mbox_to_csv(mbox_file_path, csv_file_path)
