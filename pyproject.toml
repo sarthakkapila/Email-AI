@@ -8,6 +8,7 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.11"
 mailbox = "^0.4"
+transformers = "^4.37.2"
 
 
 [build-system]
